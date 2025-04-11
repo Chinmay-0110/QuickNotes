@@ -1,0 +1,102 @@
+:root {
+    --bg: #f4f4f4;
+    --fg: #ffffff;
+    --text: #000000;
+  }
+  
+  body.dark {
+    --bg: #1e1e1e;
+    --fg: #2c2c2c;
+    --text: #f5f5f5;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--fg);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #toggleDark {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 10px;
+  }
+  
+  .input-group input,
+  #searchInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .input-group button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .note {
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+  }
+  
+  .note p[contenteditable] {
+    outline: none;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  
+  .note button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: red;
+    cursor: pointer;
+  }
+  
